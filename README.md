@@ -9,6 +9,7 @@
 
 # Projet découverte GraphQL
 Laravel breeze ReactJS pour le front avec tailwind  
+Laravel Lighthouse pour le GraphQL  
 Laravel Echo pour les websockets
 
 ## Config utilisée pour le projet
