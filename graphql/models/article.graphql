@@ -1,0 +1,21 @@
+type Article {
+    "Unique primary key."
+    id: ID!
+
+    "Non-unique name."
+    name: String!
+
+    "Unique email address."
+    image: String!
+
+    "When the email was verified."
+    description: String!
+
+    author: User!
+
+    "When the account was created."
+    created_at: DateTime!
+
+    "When the account was last updated."
+    updated_at: DateTime!
+}

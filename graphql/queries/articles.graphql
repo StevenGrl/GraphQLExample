@@ -1,0 +1,17 @@
+extend type Query {
+    "Find a single article by an identifying attribute."
+    article(
+        "Search by primary key."
+        id: ID @eq
+    ): Article @find
+
+    "List multiple articles."
+    articles: [Article!]! @all(scopes: ["description"])
+}
+
+type Mutation {
+    addArticle(name: String!, image: String!, description: String!, author_id: Int!): Article! @create
+        @broadcast(subscription: "articleAdded")
+    updateArticle(id: ID! @eq, name: String!, image: String!, description: String!): Article! @update
+    deleteArticle(id: ID! @eq): Article! @delete
+}
